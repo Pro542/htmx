@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Contact app</title>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>contacts.app</h1>
+            </header>
+            {% for message in get_flashed_messages() %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+            {% block content %}{% endblock %}
+        </main>
+    </body>
+</html>
