@@ -18,7 +18,6 @@ def contacts():
         contacts_set = Contact.search(search)
     else:
         contacts_set = Contact.all()
-        print(contacts_set)
     return render_template("index.html", contacts=contacts_set)
 
 if __name__ == "__main__":

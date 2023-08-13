@@ -8,4 +8,33 @@
     <input type="submit" value="Search" />
 </form>
 
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contact in contacts %}
+        <tr>
+            <td></td>
+            <td>{{ contact.first }}</td>
+            <td>{{ contact.last }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>{{ contact.email }}</td>
+            <td>
+                <a href="/contacts/{{ contact.id }}/edit">Edit</a>
+                <a href="/contacts/{{ contact.id }}">View</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
 {% endblock %}
